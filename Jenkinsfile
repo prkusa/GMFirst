@@ -11,7 +11,7 @@ node
    {
       // Get maven home path
       def mvnHome =  tool name: 'maven3', type: 'maven'   
-      bat "${mvnHome}/bin/mvn package"
+      bat "${'mvnHome'}/bin/mvn package"
    }
    stage('Deploy to Tomcat')
    {
